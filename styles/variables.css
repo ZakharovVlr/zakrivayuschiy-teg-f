@@ -28,4 +28,10 @@
     --block-width: clamp(375px, 100%, 700px);
     --text-color: #000;
     --object-background: #fff;
+    --watermark-stroke-color: #000000;
+    --watermark-opacity: 0.5;
+    /* Задайте прозрачность по макету (например, 0.4 или 0.5) */
+    --heart-contour-color: #000000;
+    /* Цвет контура */
+    --animation-fill-color: #ff0000;
 }

@@ -9,3 +9,228 @@
 ✦ button__text — для обозначения текстового элемента внутри кнопки
 
 */
+
+/* ==========================================================================
+   1. ПЕРЕМЕННЫЕ И БАЗОВЫЕ СТИЛИ (Состояние по умолчанию)
+   ========================================================================== */
+
+/* Точки трансформации строго по центру для корректного масштабирования */
+.like-icon,
+.like-icon .heart,
+.like-icon .sparks {
+    transform-origin: center;
+}
+
+/* Базовые переходы по умолчанию */
+.contour {
+    transition: fill 0.1s linear 0s;
+}
+
+.core {
+    fill: transparent;
+    transition: fill 0.3s linear 0.03s;
+    /* Задержка для правильного исчезновения */
+}
+
+.main-body {
+    fill: transparent;
+    transition: fill 0.3s linear 0s;
+}
+
+.sparks {
+    opacity: 0;
+}
+
+
+/* ==========================================================================
+   2. СОСТОЯНИЕ :HOVER (Только когда лайк еще НЕ поставлен)
+   ========================================================================== */
+
+/* Использован :not(.is-liked), чтобы ховер не ломал финальный красный цвет после клика */
+.like-icon:hover .core {
+    fill: var(--heart-contour-color);
+    /* ИСПРАВЛЕНО: изменен цвет на акцентный */
+    transition: fill 0.3s linear 0s;
+}
+
+.like-icon:hover .main-body {
+    fill: var(--heart-contour-color);
+    /* ИСПРАВЛЕНО: изменен цвет на акцентный */
+    transition: fill 0.3s linear 0.05s;
+}
+
+
+/* ==========================================================================
+   3. СОСТОЯНИЕ :ACTIVE (При нажатии и удержании кнопок мыши)
+   ========================================================================== */
+
+/* Сценарий А: Зажимаем саму кнопку-иконку с сердцем */
+.card__icon-button:active .like-icon .core {
+    fill: var(--animation-fill-color);
+    transition: fill 0.3s linear 0s;
+}
+
+.card__icon-button:active .like-icon .main-body {
+    fill: var(--animation-fill-color);
+    transition: fill 0.3s linear 0.05s;
+}
+
+/* ==========================================================================
+   4. КЛИК ПО ИКОНКЕ (Элементы внутри .like-icon.is-liked)
+   ========================================================================== */
+
+.like-icon.is-liked .core {
+    fill: var(--animation-fill-color);
+    transition: fill 0.3s linear 0s;
+}
+
+.like-icon.is-liked .main-body {
+    fill: var(--animation-fill-color);
+    transition: fill 0.3s linear 0.05s;
+}
+
+.like-icon.is-liked .contour {
+    fill: var(--animation-fill-color);
+    transition: fill 0.3s linear 0.06s;
+}
+
+/* Масштабирование всей группы .heart (задержка 0.1s, длительность 0.3s, ease-in) */
+.like-icon.is-liked .heart {
+    animation: heart-scale-bounce 0.3s ease-in 0.1s 1 forwards;
+}
+
+/* Вспышка искр .sparks (ИСПРАВЛЕНО: задержка изменена с 0.6s на 0.3s строго по ТЗ) */
+.like-icon.is-liked .sparks {
+    animation: sparks-flash-burst 0.3s ease-in 0.3s 1 forwards;
+}
+
+
+/* ==========================================================================
+   5. KEYFRAMES ДЛЯ АНИМАЦИИ (Вынесите в animations.css при необходимости)
+   ========================================================================== */
+
+/* Расширение до 1.25 и плавный возврат к 1 */
+@keyframes heart-scale-bounce {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.25);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Плавное появление искр и последующее исчезновение */
+@keyframes sparks-flash-burst {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.card__like-button,
+.save-button,
+.modal-dialog__close-button {
+    position: relative;
+    overflow: hidden;
+    /* Скрываем выезжающий псевдоэлемент за пределами кнопки */
+    background-color: #ffffff;
+    /* Белый фон для корректной работы разности цветов */
+    border: 2px solid #000000;
+    cursor: pointer;
+
+    /* Плавный переход для появления тени по ТЗ (0.3s ease) */
+    transition: box-shadow 0.3s ease;
+}
+
+/* 1. Настройка фокуса с клавиатуры */
+.card__like-button:focus {
+    outline: none;
+    /* Всегда отменяем стандартную обводку браузера */
+}
+
+.card__like-button:focus-visible,
+.save-button:focus-visible,
+.modal-dialog__close-button:focus-visible {
+    outline: none;
+    /* Плотная тень без размытия, сдвинутая на 2px по X и Y */
+    box-shadow: 2px 2px 0px 0px #000000;
+}
+
+/* 2. Псевдоэлемент для анимации наведения (выезжает слева направо) */
+.card__like-button::before,
+.save-button::before,
+.modal-dialog__close-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
+    /* Чёрная шторка */
+
+    /* Изначально полностью выдвигаем псевдоэлемент влево */
+    transform: translateX(-100%);
+
+    /* Плавность по ТЗ: 0.5s ease-in-out */
+    transition: transform 0.5s ease-in-out;
+}
+
+/* По наведению возвращаем шторку на место */
+.card__like-button:hover::before,
+.save-button:hover::before,
+.modal-dialog__close-button:hover::before {
+    transform: translateX(0);
+}
+
+/* 3. Магия инверсии текста и иконки дискеты */
+.button__text,
+.save-button__icon {
+    position: relative;
+    z-index: 1;
+    /* Поднимаем контент выше выезжающей чёрной шторки */
+    color: #ffffff;
+    /* Обязательно задаем БЕЛЫЙ цвет (в сочетании с разностью даст чёрный) */
+    mix-blend-mode: difference;
+    /* Инвертирует белый в чёрный на белом фоне и наоборот */
+}
+

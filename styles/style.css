@@ -56,8 +56,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: clamp(1rem, 3vw, 2rem);
-  /* Резиновый отступ между логотипом и текстом */
+  gap: 20px;
   text-align: center;
 }
 
@@ -100,19 +99,49 @@
 
 .card__image {
   width: 100%;
+  height: 696px;
   display: block;
   border-block: 2px solid #000000;
   /* Линии рамки сверху и снизу картинки */
   object-fit: cover;
 }
 
+.card__image-container {
+  position: relative;
+  width: 100%;
+  border-block: 2px solid #000000;
+  /* Переносим рамку с самой картинки на контейнер */
+}
+
+.card__watermark {
+  position: absolute;
+  top: 23px;
+  right: 25px;
+  font-family: var(--accent-font);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 100%;
+  color: #000000;
+  opacity: 0.5;
+  mix-blend-mode: hard-light;
+}
+
+/* Идеальная белая обводка в 1px для современных браузеров */
+@supports (-webkit-text-stroke: 1px #ffffff) or (text-stroke: 1px #ffffff) {
+  .card__watermark {
+    text-shadow: none;
+    -webkit-text-stroke: 1px #ffffff;
+    text-stroke: 1px #ffffff;
+  }
+}
+
 .card__text-content {
   /* Отступы внутри текстового блока карточки */
-  padding: 24px 25px 0 25px;
+  padding: 23px 25px 0 25px;
   /* Снизу 0, так как под кнопками будет свой padding */
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 25px;
 }
 
 .card__text {
@@ -128,7 +157,7 @@
   justify-content: flex-end;
   align-items: center;
   gap: 10px;
-  padding: 25px 26px 23px 17px;
+  padding: 29px 26px 23px 17px;
 }
 
 .card__icon-button {
@@ -141,12 +170,6 @@
   justify-content: center;
 }
 
-.feed-heart {}
-
-.main-body {}
-
-.core-fff {}
-
 .card__like-button {
   min-width: 130px;
   height: 38px;
@@ -158,4 +181,168 @@
   font-size: 0.875rem;
 }
 
-.button__text {}
+/* Панель с кнопкой сохранения */
+.save-panel {
+  display: flex;
+  justify-content: center;
+  padding-block-end: 50px;
+}
+
+.save-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 20px;
+  background-color: #ffffff;
+  border: 2px solid #000000;
+  font-family: var(--accent-font);
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.save-button__icon {
+  /* Задаем аккуратный размер иконки на кнопке */
+  width: 21px;
+  height: 21px;
+}
+
+/* --- СТИЛИ МОДАЛЬНОГО ОКНА --- */
+
+/* По умолчанию окно скрыто */
+.modal-dialog {
+  display: none;
+  position: fixed;
+  inset: 0;
+  margin: auto;
+  width: clamp(340px, 90vw, 353px);
+  padding: 30px;
+  background-color: #ffffff;
+  border: 2px solid #000000;
+  box-sizing: border-box;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+/* Когда окно открыто скриптом (добавляется атрибут open) */
+.modal-dialog[open] {
+  display: flex;
+}
+
+/* Двухколоночный контент внутри окна */
+.modal-dialog__content {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+}
+
+.modal-dialog__icon {
+  width: 39px;
+  height: 39px;
+  flex-shrink: 0;
+}
+
+.modal-dialog__text {
+  font-family: var(--accent-font);
+  font-size: 14px;
+  line-height: 1.5;
+  text-transform: uppercase;
+  margin: 0;
+  color: #000000;
+}
+
+/* Кнопка ОК */
+.modal-dialog__close-button {
+  width: 100%;
+  height: 38px;
+  background-color: #ffffff;
+  border: 2px solid #000000;
+  font-family: var(--accent-font);
+  font-size: 14px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+/* Затемнение заднего фона (работает только когда <dialog> открыт через метод showModal) */
+.modal-dialog::backdrop {
+  background-color: rgba(0, 0, 0, 0.75);
+}
+/* Шаг 6 */
+
+.card__image_style_mono {
+  filter: grayscale(1);
+}
+
+.card__image_style_retro {
+  filter: sepia(0.8);
+}
+
+.card__image_style_neon {
+  filter: invert(0.9);
+}
+
+.card__image_style_contrast {
+  filter: contrast(1.8);
+}
+
+.card__image_style_hue {
+  filter: hue-rotate(90deg);
+}
+
+.card__image_style_blur {
+  filter: blur(3px);
+}
+
+.card__image_style_multiple {
+  filter: grayscale(0.5) brightness(0.7) contrast(1.5) hue-rotate(45deg);
+}
+
+.card__image_style_bright {
+  filter: saturate(2);
+}
+
+@media (width <=375px) {
+
+  /* Уменьшаем общие отступы у страницы и шапки */
+  .header {
+    /* Устанавливаем точные размеры мобильной шапки из Figma */
+    width: 100%;
+    max-width: 375px;
+    /* Изменяем min-height с десктопных 368px на мобильные 327px */
+    min-height: 327px;
+    /* Добавляем рамку, которая видна на макете */
+    border: 2px solid #000000;
+    background-color: #ffffff;
+    /* Сбрасываем лишние десктопные отступы */
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  .card__image {
+    height: 371px;
+  }
+
+.save-button {
+  /* Меняем направление элементов на вертикальное, как в Figma (Flow: Vertical) */
+  flex-direction: column;
+
+  /* Точные размеры и отступы из панели свойств */
+  width: 306px;
+  height: 84px;
+  padding: 15px 12px;
+  gap: 8px;
+
+  background-color: #ffffff;
+  border: 2px solid #000000;
+
+  align-items: center;
+  justify-content: center;
+}
+
+.save-button__icon {
+  /* Задаем размер для дискеты, чтобы она гармонично смотрелась в вертикальном стеке */
+  width: 28px;
+  height: 28px;
+}
+}

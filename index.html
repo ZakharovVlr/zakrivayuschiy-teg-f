@@ -1,315 +1,514 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Закрывающий тег</title>
 
-    <link rel="icon" href="./images/favicon.svg" type="image/svg+xml">
-    
-    <link rel="icon" href="./images/favicon.ico" sizes="any">
-    
-    <link rel="apple-touch-icon" href="./images/apple-touch-icon.png">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Закрывающий тег</title>
 
-    <link rel="stylesheet" href="./fonts/fonts.css" />
-    <link rel="stylesheet" href="./styles/variables.css" />
-    <link rel="stylesheet" href="./styles/globals.css" />
-    <link rel="stylesheet" href="./styles/style.css" />
-    <link rel="stylesheet" href="./styles/animations.css" />
-  </head>
-  <body class="page">
-<svg style="display: none;">
-  <!-- Мы перенесли id, оригинальный viewBox="0 0 353 191" и fill="none" прямо в тег symbol -->
-  <symbol id="floppy-disk" viewBox="0 0 353 191" fill="none">
-    <path fill="#fff" d="M1 1h351v189H1z" />
-    <path stroke="#000" stroke-width="2" d="M1 1h351v189H1z" />
-    <path fill="#000"
-      d="M30 42h3v3h-3zM30 45h3v3h-3zM30 48h3v3h-3zM30 51h3v3h-3zM30 54h3v3h-3zM30 57h3v3h-3zM30 60h3v3h-3zM30 63h3v3h-3zM30 66h3v3h-3zM30 69h3v3h-3zM30 72h3v3h-3zM30 75h3v3h-3zM30 78h3v3h-3zM63 42v3h-3v-3zM60 42v3h-3v-3zM57 42v3h-3v-3zM54 42v3h-3v-3zM51 42v3h-3v-3zM48 42v3h-3v-3zM45 42v3h-3v-3zM42 42v3h-3v-3zM39 42v3h-3v-3zM36 42v3h-3v-3zM66 45v3h-3v-3zM39 48v3h-3v-3zM39 45v3h-3v-3zM39 51v3h-3v-3zM60 48v3h-3v-3zM60 45v3h-3v-3zM60 51v3h-3v-3zM54 48v3h-3v-3zM54 45v3h-3v-3zM54 51v3h-3v-3zM60 54v3h-3v-3zM57 54v3h-3v-3zM54 54v3h-3v-3zM51 54v3h-3v-3zM48 54v3h-3v-3zM45 54v3h-3v-3zM42 54v3h-3v-3zM39 54v3h-3v-3zM63 63v3h-3v-3zM60 63v3h-3v-3zM57 63v3h-3v-3zM54 63v3h-3v-3zM51 63v3h-3v-3zM48 63v3h-3v-3zM45 63v3h-3v-3zM42 63v3h-3v-3zM39 63v3h-3v-3zM63 66v3h-3v-3zM39 66v3h-3v-3zM63 69v3h-3v-3zM39 69v3h-3v-3zM63 72v3h-3v-3zM39 72v3h-3v-3zM39 75v3h-3v-3zM63 75v3h-3v-3zM66 78v3h-3v-3zM63 78v3h-3v-3zM60 78v3h-3v-3zM57 78v3h-3v-3zM54 78v3h-3v-3zM51 78v3h-3v-3zM48 78v3h-3v-3zM45 78v3h-3v-3zM42 78v3h-3v-3zM39 78v3h-3v-3zM36 78v3h-3v-3zM69 81h-3v-3h3zM69 78h-3v-3h3zM69 75h-3v-3h3zM69 72h-3v-3h3zM69 69h-3v-3h3zM69 66h-3v-3h3zM69 63h-3v-3h3zM69 60h-3v-3h3zM69 57h-3v-3h3zM69 54h-3v-3h3zM69 51h-3v-3h3zM89 46.25V34h10.5v1.75h1.75v3.5H99.5V41h1.75v3.5H99.5v1.75zm3.5-7h5.25v-3.5H92.5zm0 5.25h5.25V41H92.5zm14 1.75V44.5h-1.75v-1.75H103V37.5h1.75v-1.75h1.75V34h7v1.75h1.75v1.75h-3.5v-1.75h-3.5v1.75h-1.75v5.25h1.75v1.75h3.5v-1.75h3.5v1.75h-1.75v1.75zm15.75 0v-10.5h-3.5V34h10.5v1.75h-3.5v10.5zm8.75 0V37.5h1.75v-1.75h1.75V34h5.25v1.75h1.75v1.75h1.75v8.75h-3.5v-3.5h-5.25v3.5zm3.5-5.25h5.25v-3.5H138v-1.75h-1.75v1.75h-1.75zm10.5 5.25V34h10.5v1.75h1.75v3.5h-1.75V41h1.75v3.5h-1.75v1.75zm3.5-7h5.25v-3.5h-5.25zm0 5.25h5.25V41h-5.25zm10.5 1.75V34h3.5v3.5h7v1.75h1.75v5.25h-1.75v1.75zm3.5-1.75h5.25v-5.25h-5.25zm15.75 1.75v-10.5h-3.5V34h10.5v1.75h-3.5v10.5zm8.75 0V34h12.25v1.75h-8.75v3.5h7V41h-7v3.5h8.75v1.75zM89 69v-3.5h1.75V62h1.75v-7h8.75v10.5H103V69h-3.5v-1.75h-7V69zm5.25-3.5h3.5v-8.75h-3.5zm8.75 1.75V55h3.5v7h1.75v-1.75H110V58.5h1.75V55h3.5v12.25h-3.5V62H110v1.75h-1.75v1.75h-1.75v1.75zm17.5 0V65.5h-1.75v-1.75H117V58.5h1.75v-1.75h1.75V55h7v1.75h1.75v1.75h-3.5v-1.75h-3.5v1.75h-1.75v5.25h1.75v1.75h3.5v-1.75h3.5v1.75h-1.75v1.75zm15.75-8.75H138v1.75h1.75V62h1.75v3.5h1.75v1.75h-3.5V65.5H138V62h-3.5v5.25H131V55h3.5v5.25h1.75zm7-3.5v1.75h-1.75v1.75H138v-1.75h1.75V55zM145 67.25V55h12.25v1.75h-8.75v3.5h7V62h-7v3.5h8.75v1.75zm19.25 0v-10.5h-3.5V55h10.5v1.75h-3.5v10.5zm10.5 0V65.5H173v-1.75h3.5v1.75h5.25V62h-7v-1.75H173V55h3.5v5.25h5.25V55h3.5v10.5h-1.75v1.75zm14 1.75v-1.75h1.75v-3.5h3.5v3.5h-1.75V69zm35-1.75V62h-7v-1.75H215V55h3.5v5.25h5.25V55h3.5v12.25zm10.5 0v-10.5h-3.5V55h10.5v1.75h-3.5v10.5zm10.5 0V65.5H243v-8.75h1.75V55h8.75v1.75h1.75v8.75h-1.75v1.75zm1.75-1.75h5.25v-8.75h-5.25zm10.5 1.75V55h10.5v1.75h-7v3.5h7V62h1.75v3.5h-1.75v1.75zm3.5-1.75h5.25V62h-5.25zm10.5 1.75V55h3.5v3.5h3.5v8.75zm8.75 0V55h3.5v12.25zm-5.25-1.75h1.75v-5.25h-1.75zM89 88.25V76h12.25v12.25h-3.5v-10.5H92.5v10.5zm14 0V76h10.5v1.75h1.75V83h-1.75v1.75h-7v3.5zm3.5-5.25h5.25v-5.25h-5.25zm12.25 5.25V86.5H117v-8.75h1.75V76h8.75v1.75h1.75v8.75h-1.75v1.75zm1.75-1.75h5.25v-8.75h-5.25zM131 90v-3.5h1.75V83h1.75v-7h8.75v10.5H145V90h-3.5v-1.75h-7V90zm5.25-3.5h3.5v-8.75h-3.5zm10.5 1.75V86.5H145v-8.75h1.75V76h8.75v1.75h1.75v8.75h-1.75v1.75zm1.75-1.75h5.25v-8.75h-5.25zm10.5 1.75v-3.5h1.75V83h1.75v-7h8.75v12.25h-3.5v-10.5h-3.5v8.75h-1.75v1.75zM176.5 76v5.25h-1.75V79.5H173V76zm3.5 5.25h1.75V83H180v5.25h-1.75V83h-1.75v-1.75h1.75V76H180zm5.25-5.25v3.5h-1.75v1.75h-1.75V76zm-10.5 7h1.75v5.25H173v-3.5h1.75zm7 5.25V83h1.75v1.75h1.75v3.5zm5.25 0V76h3.5v7h1.75v-1.75H194V79.5h1.75V76h3.5v12.25h-3.5V83H194v1.75h-1.75v1.75h-1.75v1.75zm19.25 0v-10.5h-3.5V76h10.5v1.75h-3.5v10.5zm8.75 0V76h3.5v3.5h7v1.75h1.75v5.25h-1.75v1.75zm3.5-1.75h5.25v-5.25h-5.25z" />
-    <path fill="#fff" d="M31 124h291v36H31z" />
-    <path stroke="#000" stroke-width="2" d="M31 124h291v36H31z" />
-    <path fill="#000"
-      d="M164.25 147.75V146h-1.75v-8.75h1.75v-1.75H173v1.75h1.75V146H173v1.75zM166 146h5.25v-8.75H166zm15.75-7h1.75v1.75h1.75v1.75H187v3.5h1.75v1.75h-3.5V146h-1.75v-3.5H180v5.25h-3.5V135.5h3.5v5.25h1.75zm7-3.5v1.75H187V139h-3.5v-1.75h1.75v-1.75z" />
-  </symbol>
-</svg>
+  <link rel="icon" href="./images/favicon.svg" type="image/svg+xml">
 
+  <link rel="icon" href="./images/favicon.ico" sizes="any">
 
-    <header class="header">
-      <div class="container header__content">
-        <a class="header__logo" href="#">&lt;/HTML&gt;</a>
-        <h1 class="header__title">закрывающий тег</h1>
+  <link rel="apple-touch-icon" href="./images/apple-touch-icon.png">
+
+  <link rel="stylesheet" href="./fonts/fonts.css" />
+  <link rel="stylesheet" href="./styles/variables.css" />
+  <link rel="stylesheet" href="./styles/globals.css" />
+  <link rel="stylesheet" href="./styles/style.css" />
+  <link rel="stylesheet" href="./styles/animations.css" />
+</head>
+
+<body class="page">
+
+  <svg style="display: none;">
+    <symbol id="floppy-disk" viewBox="0 0 39 39" fill="none">
+      <path fill="#000"
+        d="M0 0h3v3H0zM0 3h3v3H0zM0 6h3v3H0zM0 9h3v3H0zM0 12h3v3H0zM0 15h3v3H0zM0 18h3v3H0zM0 21h3v3H0zM0 24h3v3H0zM0 27h3v3H0zM0 30h3v3H0zM0 33h3v3H0zM0 36h3v3H0zM33 0v3h-3V0zM30 0v3h-3V0zM27 0v3h-3V0zM24 0v3h-3V0zM21 0v3h-3V0zM18 0v3h-3V0zM15 0v3h-3V0zM12 0v3H9V0zM9 0v3H6V0zM6 0v3H3V0zM36 3v3h-3V3zM9 6v3H6V6zM9 3v3H6V3zM9 9v3H6V9zM30 6v3h-3V6zM30 3v3h-3V3zM30 9v3h-3V9zM24 6v3h-3V6zM24 3v3h-3V3zM24 9v3h-3V9zM30 12v3h-3v-3zM27 12v3h-3v-3zM24 12v3h-3v-3zM21 12v3h-3v-3zM18 12v3h-3v-3zM15 12v3h-3v-3zM12 12v3H9v-3zM9 12v3H6v-3zM33 21v3h-3v-3zM30 21v3h-3v-3zM27 21v3h-3v-3zM24 21v3h-3v-3zM21 21v3h-3v-3zM18 21v3h-3v-3zM15 21v3h-3v-3zM12 21v3H9v-3zM9 21v3H6v-3zM33 24v3h-3v-3zM9 24v3H6v-3zM33 27v3h-3v-3zM9 27v3H6v-3zM33 30v3h-3v-3zM9 30v3H6v-3zM9 33v3H6v-3zM33 33v3h-3v-3zM36 36v3h-3v-3zM33 36v3h-3v-3zM30 36v3h-3v-3zM27 36v3h-3v-3zM24 36v3h-3v-3zM21 36v3h-3v-3zM18 36v3h-3v-3zM15 36v3h-3v-3zM12 36v3H9v-3zM9 36v3H6v-3zM6 36v3H3v-3zM39 39h-3v-3h3zM39 36h-3v-3h3zM39 33h-3v-3h3zM39 30h-3v-3h3zM39 27h-3v-3h3zM39 24h-3v-3h3zM39 21h-3v-3h3zM39 18h-3v-3h3zM39 15h-3v-3h3zM39 12h-3V9h3zM39 9h-3V6h3z" />
+    </symbol>
+  </svg>
+
+  <header class="header">
+    <div class="container header__content">
+      <a class="header__logo" href="#">&lt;/HTML&gt;</a>
+      <h1 class="header__title">закрывающий тег</h1>
+    </div>
+  </header>
+
+  <main class="content">
+    <!-- Карточка поста. Используем класс container для ограничения ширины до 700px -->
+    <article class="card container">
+      <!-- Заголовок карточки -->
+      <h2 class="card__title">Фритрек и нулевой спринт: Подготовка к работе</h2>
+      <div class="card__image-container">
+        <!-- Изображение поста -->
+        <img class="card__image card__image card__image_style_mono" src="images/image-classroom.jpg"
+          alt="Ученик за партой">
+        <span class="card__watermark" aria-hidden="true">&lt;/HTML&gt;</span>
       </div>
-    </header>
+      <!-- Текстовый контент карточки -->
+      <div class="card__text-content">
+        <p class="card__text">Это было самое начало пути. На этом этапе важно было проникнуться основами и настроиться
+          на
+          учёбу. И, возможно, подумать, как новые знания могут повлиять на ваше будущее.</p>
+        <p class="card__text">Место для ваших воспоминаний о начале обучения.</p>
+      </div>
 
-      <main class="content">
-        <!-- Карточка поста. Используем класс container для ограничения ширины до 700px -->
-        <article class="card container">
-          <!-- Заголовок карточки -->
-          <h2 class="card__title">Фритрек и нулевой спринт: Подготовка к работе</h2>
-      
-          <!-- Изображение поста -->
-          <img class="card__image" src="./images/image.png" alt="Пиксельный фургон с едой на фоне ночного неба">
-      
-          <!-- Текстовый контент карточки -->
-          <div class="card__text-content">
-            <p class="card__text">Это было самое начало пути. На этом этапе важно было проникнуться основами и настроиться на
-              учёбу. И, возможно, подумать, как новые знания могут повлиять на ваше будущее.</p>
-            <p class="card__text">Место для ваших воспоминаний о начале обучения.</p>
-          </div>
-      
-          <!-- Блок с интерактивными кнопками внизу карточки -->
-          <div class="card__buttons">
-            <!-- Кнопка-сердце для лайка -->
-            <button class="card__icon-button" type="button" aria-label="Поставить лайк">
-              <!-- Инлайновый SVG сердца. Внимание на классы core-fff и main-body (нужны для скрипта) -->
-              <svg xmlns="svg/Vector.svg" width="27" height="24" fill="none" viewBox="0 0 27 24">
-                <path fill="#000"
-                  d="M6 0H3v3h3zM9 0H6v3h3zM3 3H0v3h3zM3 6H0v3h3zM3 9H0v3h3zM12 0H9v3h3zM6 12H3v3h3zM9 15H6v3h3zM12 18H9v3h3zM21 0h3v3h-3zM18 0h3v3h-3zM24 3h3v3h-3zM24 6h3v3h-3zM24 9h3v3h-3zM15 0h3v3h-3zM21 12h3v3h-3zM18 15h3v3h-3zM15 18h3v3h-3zM15 3h-3v3h3zM15 21h-3v3h3z" />
-              </svg>
-            </button>
-      
-            <!-- Кнопка Like с текстом в span -->
-            <button class="card__like-button" type="button">
-              <span class="button__text">Like</span>
-            </button>
-          </div>
-        </article>
+      <!-- Блок с интерактивными кнопками внизу карточки -->
+      <div class="card__buttons">
+        <!-- Кнопка-сердце для лайка -->
+        <button class="card__icon-button" type="button" aria-label="Поставить лайк">
+          <!-- Инлайновый SVG сердца с классом like-icon -->
+          <svg class="like-icon" xmlns="http://www.w3.org/2000/svg" width="39" height="36" fill="none"
+            viewBox="0 0 39 36">
 
-        <article class="card container">
-          <!-- Заголовок карточки -->
-          <h2 class="card__title">1 спринт: Я — чистый лист</h2>
-        
-          <!-- Изображение поста -->
-          <img class="card__image" src="./images/image (1).png" alt="Пиксельный фургон с едой на фоне ночного неба">
-        
-          <!-- Текстовый контент карточки -->
-          <div class="card__text-content">
-            <p class="card__text">На первых этапах мы работали со страхами и сомнениями, которые часто испытывают новички. Один из них — страх перед
-            чистым листом. Это, конечно же, намного сложнее, чем боязнь куска бумаги. Часто за этим ощущением скрываются более
-            глубокие вопросы: с чего начать? а вдруг будет слишком сложно? что, если я не справлюсь?</p>
-            <p class="card__text">Место для ваших воспоминаний о начале первого спринта.</p>
-          </div>
-        
-          <!-- Блок с интерактивными кнопками внизу карточки -->
-          <div class="card__buttons">
-            <!-- Кнопка-сердце для лайка -->
-            <button class="card__icon-button" type="button" aria-label="Поставить лайк">
-              <!-- Инлайновый SVG сердца. Внимание на классы core-fff и main-body (нужны для скрипта) -->
-              <svg xmlns="svg/Vector.svg" width="27" height="24" fill="none" viewBox="0 0 27 24">
-                <path fill="#000"
-                  d="M6 0H3v3h3zM9 0H6v3h3zM3 3H0v3h3zM3 6H0v3h3zM3 9H0v3h3zM12 0H9v3h3zM6 12H3v3h3zM9 15H6v3h3zM12 18H9v3h3zM21 0h3v3h-3zM18 0h3v3h-3zM24 3h3v3h-3zM24 6h3v3h-3zM24 9h3v3h-3zM15 0h3v3h-3zM21 12h3v3h-3zM18 15h3v3h-3zM15 18h3v3h-3zM15 3h-3v3h3zM15 21h-3v3h3z" />
-              </svg>
-            </button>
-        
-            <!-- Кнопка Like с текстом в span -->
-            <button class="card__like-button" type="button">
-              <span class="button__text">Like</span>
-            </button>
-          </div>
-        </article>
+            <!-- Группа для тела сердца (увеличивается при анимации без искр) -->
+            <g class="heart">
+              <!-- Контур (contour) — заменен цвет на переменную -->
+              <path class="contour" fill="var(--heart-contour-color)"
+                d="M12 6H9v3h3zm3 0h-3v3h3zM9 9H6v3h3zm0 3H6v3h3zm0 3H6v3h3zm9-9h-3v3h3zm-6 12H9v3h3zm3 3h-3v3h3zm3 3h-3v3h3zm9-18h3v3h-3zm-3 0h3v3h-3zm6 3h3v3h-3zm0 3h3v3h-3zm0 3h3v3h-3zm-9-9h3v3h-3zm6 12h3v3h-3zm-3 3h3v3h-3zm-3 3h3v3h-3zm0 3h-3v3h3zm0-18h-3v3h3z" />
 
-        <article class="card container">
-          <!-- Заголовок карточки -->
-          <h2 class="card__title">1 спринт: А если не получится?</h2>
-        
-          <!-- Изображение поста -->
-          <img class="card__image" src="./images/image (2).png" alt="Пиксельный фургон с едой на фоне ночного неба">
-        
-          <!-- Текстовый контент карточки -->
-          <div class="card__text-content">
-            <p class="card__text">Первый проект — позади! Но это всё ещё самое начало пути. Радость могла быстро померкнуть и смениться ожиданием провала.
-            Или вы, наоборот, могли вдохновиться успехами и поверить в себя.</p>
-            <p class="card__text">Место для ваших воспоминаний об окончании первого спринта.</p>
-          </div>
-        
-          <!-- Блок с интерактивными кнопками внизу карточки -->
-          <div class="card__buttons">
-            <!-- Кнопка-сердце для лайка -->
-            <button class="card__icon-button" type="button" aria-label="Поставить лайк">
-              <!-- Инлайновый SVG сердца. Внимание на классы core-fff и main-body (нужны для скрипта) -->
-              <svg xmlns="svg/Vector.svg" width="27" height="24" fill="none" viewBox="0 0 27 24">
-                <path fill="#000"
-                  d="M6 0H3v3h3zM9 0H6v3h3zM3 3H0v3h3zM3 6H0v3h3zM3 9H0v3h3zM12 0H9v3h3zM6 12H3v3h3zM9 15H6v3h3zM12 18H9v3h3zM21 0h3v3h-3zM18 0h3v3h-3zM24 3h3v3h-3zM24 6h3v3h-3zM24 9h3v3h-3zM15 0h3v3h-3zM21 12h3v3h-3zM18 15h3v3h-3zM15 18h3v3h-3zM15 3h-3v3h3zM15 21h-3v3h3z" />
-              </svg>
-            </button>
-        
-            <!-- Кнопка Like с текстом в span -->
-            <button class="card__like-button" type="button">
-              <span class="button__text">Like</span>
-            </button>
-          </div>
-        </article>
+              <!-- Основное тело (main-body) — цвет изменен на transparent -->
+              <path class="main-body" fill="transparent"
+                d="M12 9H9v3h3zm3 3h-3v3h3zm3-3h-3v3h3zm-6 6H9v3h3zm3 0h-3v3h3zm0 3h-3v3h3zm3-6h-3v3h3zm0 9h-3v3h3zm0-3h-3v3h3zm9-9h3v3h-3zm-3 0h3v3h-3zm3 3h3v3h-3zm-3 0h3v3h-3zm-3-3h3v3h-3zm6 6h3v3h-3zm-3 0h3v3h-3zm0 3h3v3h-3zm-3-6h3v3h-3zm0 9h3v3h-3zm0-3h3v3h-3zm0 3h-3v3h3zm0 3h-3v3h3z" />
 
-        <article class="card container">
-          <!-- Заголовок карточки -->
-          <h2 class="card__title">2 спринт: Погоня за идеалом</h2>
-        
-          <!-- Изображение поста -->
-          <img class="card__image" src="./images/image (3).png" alt="Пиксельный фургон с едой на фоне ночного неба">
-        
-          <!-- Текстовый контент карточки -->
-          <div class="card__text-content">
-            <p class="card__text">На этом этапе вы уже достаточно разбирались в основах вёрстки, чтобы понять, как много ещё впереди. Вы могли попытаться
-            погнаться за идеалом и понять, что он недостижим. А, может, вы вовсе и не подвержены перфекционизму и вместо того, чтобы
-            сделать идеально, старались просто сделать.</p>
-            <p class="card__text">Место для ваших воспоминаний о начале второго спринта.</p>
-          </div>
-        
-          <!-- Блок с интерактивными кнопками внизу карточки -->
-          <div class="card__buttons">
-            <!-- Кнопка-сердце для лайка -->
-            <button class="card__icon-button" type="button" aria-label="Поставить лайк">
-              <!-- Инлайновый SVG сердца. Внимание на классы core-fff и main-body (нужны для скрипта) -->
-              <svg xmlns="svg/Vector.svg" width="27" height="24" fill="none" viewBox="0 0 27 24">
-                <path fill="#000"
-                  d="M6 0H3v3h3zM9 0H6v3h3zM3 3H0v3h3zM3 6H0v3h3zM3 9H0v3h3zM12 0H9v3h3zM6 12H3v3h3zM9 15H6v3h3zM12 18H9v3h3zM21 0h3v3h-3zM18 0h3v3h-3zM24 3h3v3h-3zM24 6h3v3h-3zM24 9h3v3h-3zM15 0h3v3h-3zM21 12h3v3h-3zM18 15h3v3h-3zM15 18h3v3h-3zM15 3h-3v3h3zM15 21h-3v3h3z" />
-              </svg>
-            </button>
-        
-            <!-- Кнопка Like с текстом в span -->
-            <button class="card__like-button" type="button">
-              <span class="button__text">Like</span>
-            </button>
-          </div>
-        </article>
+              <!-- Сердцевина (core) — цвет изменен на transparent -->
+              <path class="core" fill="transparent"
+                d="M18 15h-3v3h3zm3 0h3v3h-3zm0 0h-3v3h3zm0-3h-3v3h3zm0 6h-3v3h3z" />
+            </g>
 
-        <article class="card container">
-          <!-- Заголовок карточки -->
-          <h2 class="card__title">2 спринт: О тех, кто рядом</h2>
-        
-          <!-- Изображение поста -->
-          <img class="card__image" src="./images/image (4).png" alt="Пиксельный фургон с едой на фоне ночного неба">
-        
-          <!-- Текстовый контент карточки -->
-          <div class="card__text-content">
-            <p class="card__text">Всё это время вы были не одиноки (хотя, возможно, иногда и чувствовали, что одни против целого мира). Вас окружали
-            одногруппники, команда сопровождения и просто близкие люди, которым можно пожаловаться, если очередной макет просто так
-            не поддавался. Осваивать что-то новое легче, когда рядом есть единомышленники, не правда ли?</p>
-            <p class="card__text">Место для ваших воспоминаний об окончании второго спринта.</p>
-          </div>
-        
-          <!-- Блок с интерактивными кнопками внизу карточки -->
-          <div class="card__buttons">
-            <!-- Кнопка-сердце для лайка -->
-            <button class="card__icon-button" type="button" aria-label="Поставить лайк">
-              <!-- Инлайновый SVG сердца. Внимание на классы core-fff и main-body (нужны для скрипта) -->
-              <svg xmlns="svg/Vector.svg" width="27" height="24" fill="none" viewBox="0 0 27 24">
-                <path fill="#000"
-                  d="M6 0H3v3h3zM9 0H6v3h3zM3 3H0v3h3zM3 6H0v3h3zM3 9H0v3h3zM12 0H9v3h3zM6 12H3v3h3zM9 15H6v3h3zM12 18H9v3h3zM21 0h3v3h-3zM18 0h3v3h-3zM24 3h3v3h-3zM24 6h3v3h-3zM24 9h3v3h-3zM15 0h3v3h-3zM21 12h3v3h-3zM18 15h3v3h-3zM15 18h3v3h-3zM15 3h-3v3h3zM15 21h-3v3h3z" />
-              </svg>
-            </button>
-        
-            <!-- Кнопка Like с текстом в span -->
-            <button class="card__like-button" type="button">
-              <span class="button__text">Like</span>
-            </button>
-          </div>
-        </article>
+            <!-- Искры (sparks) — заменен цвет на переменную, прозрачность задается в CSS -->
+            <path class="sparks" fill="var(--animation-fill-color)"
+              d="M36 13h3v3h-3zm-9 14h3v3h-3zm-9 6h3v3h-3zm-9-6h3v3H9zM24 0h3v3h-3zm9 3h3v3h-3zM3 3h3v3H3zm9-3h3v3h-3zM0 13h3v3H0z" />
 
-        <article class="card container">
-          <!-- Заголовок карточки -->
-          <h2 class="card__title">3 спринт: Обходные стратегии</h2>
-        
-          <!-- Изображение поста -->
-          <img class="card__image" src="./images/image (5).png" alt="Пиксельный фургон с едой на фоне ночного неба">
-        
-          <!-- Текстовый контент карточки -->
-          <div class="card__text-content">
-            <p class="card__text">На этом курсе вы постоянно решали разные задачи. В какой-то момент вам могло показаться, что решения просто иссякли.
-            Значит, пришло время посмотреть на задачу под другим углом.</p>
-            <p class="card__text">Место для ваших воспоминаний о начале третьего спринта.</p>
-          </div>
-        
-          <!-- Блок с интерактивными кнопками внизу карточки -->
-          <div class="card__buttons">
-            <!-- Кнопка-сердце для лайка -->
-            <button class="card__icon-button" type="button" aria-label="Поставить лайк">
-              <!-- Инлайновый SVG сердца. Внимание на классы core-fff и main-body (нужны для скрипта) -->
-              <svg xmlns="svg/Vector.svg" width="27" height="24" fill="none" viewBox="0 0 27 24">
-                <path fill="#000"
-                  d="M6 0H3v3h3zM9 0H6v3h3zM3 3H0v3h3zM3 6H0v3h3zM3 9H0v3h3zM12 0H9v3h3zM6 12H3v3h3zM9 15H6v3h3zM12 18H9v3h3zM21 0h3v3h-3zM18 0h3v3h-3zM24 3h3v3h-3zM24 6h3v3h-3zM24 9h3v3h-3zM15 0h3v3h-3zM21 12h3v3h-3zM18 15h3v3h-3zM15 18h3v3h-3zM15 3h-3v3h3zM15 21h-3v3h3z" />
-              </svg>
-            </button>
-        
-            <!-- Кнопка Like с текстом в span -->
-            <button class="card__like-button" type="button">
-              <span class="button__text">Like</span>
-            </button>
-          </div>
-        </article>
+          </svg>
+        </button>
 
-          <article class="card container">
-            <!-- Заголовок карточки -->
-            <h2 class="card__title">3 спринт: Когда опускаются руки</h2>
-          
-            <!-- Изображение поста -->
-            <img class="card__image" src="./images/image (6).png" alt="Пиксельный фургон с едой на фоне ночного неба">
-          
-            <!-- Текстовый контент карточки -->
-            <div class="card__text-content">
-              <p class="card__text">Во время учёбы часто возникает чувство, когда не знаешь, за что хвататься. Вроде и проектную пора сдавать, и задачи
-              хочется порешать, и в теории получше разобраться, и жизнь не забыть пожить. В такие моменты очень нужна концентрация.
-              Вспомните, откуда вы её черпали.</p>
-              <p class="card__text">Место для ваших воспоминаний об окончании третьего спринта.</p>
-            </div>
-          
-            <!-- Блок с интерактивными кнопками внизу карточки -->
-            <div class="card__buttons">
-              <!-- Кнопка-сердце для лайка -->
-              <button class="card__icon-button" type="button" aria-label="Поставить лайк">
-                <!-- Инлайновый SVG сердца. Внимание на классы core-fff и main-body (нужны для скрипта) -->
-                <svg xmlns="svg/Vector.svg" width="27" height="24" fill="none" viewBox="0 0 27 24">
-                  <path fill="#000"
-                    d="M6 0H3v3h3zM9 0H6v3h3zM3 3H0v3h3zM3 6H0v3h3zM3 9H0v3h3zM12 0H9v3h3zM6 12H3v3h3zM9 15H6v3h3zM12 18H9v3h3zM21 0h3v3h-3zM18 0h3v3h-3zM24 3h3v3h-3zM24 6h3v3h-3zM24 9h3v3h-3zM15 0h3v3h-3zM21 12h3v3h-3zM18 15h3v3h-3zM15 18h3v3h-3zM15 3h-3v3h3zM15 21h-3v3h3z" />
-                </svg>
-              </button>
-          
-              <!-- Кнопка Like с текстом в span -->
-              <button class="card__like-button" type="button">
-                <span class="button__text">Like</span>
-              </button>
-            </div>
-          </article>
+        <!-- Кнопка Like с текстом в span -->
+        <button class="card__like-button" type="button">
+          <span class="button__text">Like</span>
+        </button>
+      </div>
+    </article>
 
-            <article class="card container">
-              <!-- Заголовок карточки -->
-              <h2 class="card__title">«Сейчас я здесь»</h2>
-            
-              <!-- Изображение поста -->
-              <img class="card__image" src="./images/image (7).png" alt="Пиксельный фургон с едой на фоне ночного неба">
-            
-              <!-- Текстовый контент карточки -->
-              <div class="card__text-content">
-                <p class="card__text">Сейчас вы уже очень много знаете о вёрстке. Но это только начало. Во-первых, впереди ещё много материала про
-                «красотищу». Во-вторых, с окончанием курса учёба не заканчивается. Вёрстка — это целый мир. И этот мир постоянно
-                меняется. Познать его полностью не получится, но это тот случай, когда важен сам процесс познания. Ведь часто путь — и
-                есть результат.</p>
-                <p class="card__text">Место, чтобы остановиться, подумать и написать, что вы чувствуете в этой точке пути.</p>
-              </div>
-            
-              <!-- Блок с интерактивными кнопками внизу карточки -->
-              <div class="card__buttons">
-                <!-- Кнопка-сердце для лайка -->
-                <button class="card__icon-button" type="button" aria-label="Поставить лайк">
-                  <!-- Инлайновый SVG сердца. Внимание на классы core-fff и main-body (нужны для скрипта) -->
-                  <svg xmlns="svg/Vector.svg" width="27" height="24" fill="none" viewBox="0 0 27 24">
-                    <path fill="#000"
-                      d="M6 0H3v3h3zM9 0H6v3h3zM3 3H0v3h3zM3 6H0v3h3zM3 9H0v3h3zM12 0H9v3h3zM6 12H3v3h3zM9 15H6v3h3zM12 18H9v3h3zM21 0h3v3h-3zM18 0h3v3h-3zM24 3h3v3h-3zM24 6h3v3h-3zM24 9h3v3h-3zM15 0h3v3h-3zM21 12h3v3h-3zM18 15h3v3h-3zM15 18h3v3h-3zM15 3h-3v3h3zM15 21h-3v3h3z" />
-                  </svg>
-                </button>
-            
-                <!-- Кнопка Like с текстом в span -->
-                <button class="card__like-button" type="button">
-                  <span class="button__text">Like</span>
-                </button>
-              </div>
-            </article>
+    <article class="card container">
+      <!-- Заголовок карточки -->
+      <h2 class="card__title">1 спринт: Я — чистый лист</h2>
+      <div class="card__image-container">
+        <!-- Изображение поста -->
+        <img class="card__image card__image card__image_style_retro" src="images/image-clean-list.jpg"
+          alt="раскрытый пустой блокнот на столе">
+        <span class="card__watermark" aria-hidden="true">&lt;/HTML&gt;</span>
+      </div>
+      <!-- Текстовый контент карточки -->
+      <div class="card__text-content">
+        <p class="card__text">На первых этапах мы работали со страхами и сомнениями, которые часто испытывают новички.
+          Один из них — страх перед
+          чистым листом. Это, конечно же, намного сложнее, чем боязнь куска бумаги. Часто за этим ощущением скрываются
+          более
+          глубокие вопросы: с чего начать? а вдруг будет слишком сложно? что, если я не справлюсь?</p>
+        <p class="card__text">Место для ваших воспоминаний о начале первого спринта.</p>
+      </div>
 
+      <!-- Блок с интерактивными кнопками внизу карточки -->
+      <div class="card__buttons">
+        <!-- Кнопка-сердце для лайка -->
+        <button class="card__icon-button" type="button" aria-label="Поставить лайк">
+          <!-- Инлайновый SVG сердца с классом like-icon -->
+          <svg class="like-icon" xmlns="http://www.w3.org/2000/svg" width="39" height="36" fill="none"
+            viewBox="0 0 39 36">
 
-      <svg class="button__icon" width="353" height="191">
-        <use href="#floppy-disk"></use>
-      </svg>
+            <!-- Группа для тела сердца (увеличивается при анимации без искр) -->
+            <g class="heart">
+              <!-- Контур (contour) — заменен цвет на переменную -->
+              <path class="contour" fill="var(--heart-contour-color)"
+                d="M12 6H9v3h3zm3 0h-3v3h3zM9 9H6v3h3zm0 3H6v3h3zm0 3H6v3h3zm9-9h-3v3h3zm-6 12H9v3h3zm3 3h-3v3h3zm3 3h-3v3h3zm9-18h3v3h-3zm-3 0h3v3h-3zm6 3h3v3h-3zm0 3h3v3h-3zm0 3h3v3h-3zm-9-9h3v3h-3zm6 12h3v3h-3zm-3 3h3v3h-3zm-3 3h3v3h-3zm0 3h-3v3h3zm0-18h-3v3h3z" />
 
-    </main>
-    <script src="./scripts/like.js"></script>
-  </body>
+              <!-- Основное тело (main-body) — цвет изменен на transparent -->
+              <path class="main-body" fill="transparent"
+                d="M12 9H9v3h3zm3 3h-3v3h3zm3-3h-3v3h3zm-6 6H9v3h3zm3 0h-3v3h3zm0 3h-3v3h3zm3-6h-3v3h3zm0 9h-3v3h3zm0-3h-3v3h3zm9-9h3v3h-3zm-3 0h3v3h-3zm3 3h3v3h-3zm-3 0h3v3h-3zm-3-3h3v3h-3zm6 6h3v3h-3zm-3 0h3v3h-3zm0 3h3v3h-3zm-3-6h3v3h-3zm0 9h3v3h-3zm0-3h3v3h-3zm0 3h-3v3h3zm0 3h-3v3h3z" />
+
+              <!-- Сердцевина (core) — цвет изменен на transparent -->
+              <path class="core" fill="transparent"
+                d="M18 15h-3v3h3zm3 0h3v3h-3zm0 0h-3v3h3zm0-3h-3v3h3zm0 6h-3v3h3z" />
+            </g>
+
+            <!-- Искры (sparks) — заменен цвет на переменную, прозрачность задается в CSS -->
+            <path class="sparks" fill="var(--animation-fill-color)"
+              d="M36 13h3v3h-3zm-9 14h3v3h-3zm-9 6h3v3h-3zm-9-6h3v3H9zM24 0h3v3h-3zm9 3h3v3h-3zM3 3h3v3H3zm9-3h3v3h-3zM0 13h3v3H0z" />
+
+          </svg>
+        </button>
+        <!-- Кнопка Like с текстом в span -->
+        <button class="card__like-button" type="button">
+          <span class="button__text">Like</span>
+        </button>
+      </div>
+    </article>
+
+    <article class="card container">
+      <!-- Заголовок карточки -->
+      <h2 class="card__title">1 спринт: А если не получится?</h2>
+      <div class="card__image-container">
+        <!-- Изображение поста -->
+        <img class="card__image card__image_style_neon" src="images/Wait What GIF by official_pucca.gif"
+          alt="Анимированный персонаж в недоумении» или «Персонаж из мультфильма Pucca удивлён">
+        <span class="card__watermark" aria-hidden="true">&lt;/HTML&gt;</span>
+      </div>
+      <!-- Текстовый контент карточки -->
+      <div class="card__text-content">
+        <p class="card__text">Первый проект — позади! Но это всё ещё самое начало пути. Радость могла быстро померкнуть
+          и смениться ожиданием провала.
+          Или вы, наоборот, могли вдохновиться успехами и поверить в себя.</p>
+        <p class="card__text">Место для ваших воспоминаний об окончании первого спринта.</p>
+      </div>
+
+      <!-- Блок с интерактивными кнопками внизу карточки -->
+      <div class="card__buttons">
+        <!-- Кнопка-сердце для лайка -->
+        <button class="card__icon-button" type="button" aria-label="Поставить лайк">
+          <!-- Инлайновый SVG сердца с классом like-icon -->
+          <svg class="like-icon" xmlns="http://www.w3.org/2000/svg" width="39" height="36" fill="none"
+            viewBox="0 0 39 36">
+
+            <!-- Группа для тела сердца (увеличивается при анимации без искр) -->
+            <g class="heart">
+              <!-- Контур (contour) — заменен цвет на переменную -->
+              <path class="contour" fill="var(--heart-contour-color)"
+                d="M12 6H9v3h3zm3 0h-3v3h3zM9 9H6v3h3zm0 3H6v3h3zm0 3H6v3h3zm9-9h-3v3h3zm-6 12H9v3h3zm3 3h-3v3h3zm3 3h-3v3h3zm9-18h3v3h-3zm-3 0h3v3h-3zm6 3h3v3h-3zm0 3h3v3h-3zm0 3h3v3h-3zm-9-9h3v3h-3zm6 12h3v3h-3zm-3 3h3v3h-3zm-3 3h3v3h-3zm0 3h-3v3h3zm0-18h-3v3h3z" />
+
+              <!-- Основное тело (main-body) — цвет изменен на transparent -->
+              <path class="main-body" fill="transparent"
+                d="M12 9H9v3h3zm3 3h-3v3h3zm3-3h-3v3h3zm-6 6H9v3h3zm3 0h-3v3h3zm0 3h-3v3h3zm3-6h-3v3h3zm0 9h-3v3h3zm0-3h-3v3h3zm9-9h3v3h-3zm-3 0h3v3h-3zm3 3h3v3h-3zm-3 0h3v3h-3zm-3-3h3v3h-3zm6 6h3v3h-3zm-3 0h3v3h-3zm0 3h3v3h-3zm-3-6h3v3h-3zm0 9h3v3h-3zm0-3h3v3h-3zm0 3h-3v3h3zm0 3h-3v3h3z" />
+
+              <!-- Сердцевина (core) — цвет изменен на transparent -->
+              <path class="core" fill="transparent"
+                d="M18 15h-3v3h3zm3 0h3v3h-3zm0 0h-3v3h3zm0-3h-3v3h3zm0 6h-3v3h3z" />
+            </g>
+
+            <!-- Искры (sparks) — заменен цвет на переменную, прозрачность задается в CSS -->
+            <path class="sparks" fill="var(--animation-fill-color)"
+              d="M36 13h3v3h-3zm-9 14h3v3h-3zm-9 6h3v3h-3zm-9-6h3v3H9zM24 0h3v3h-3zm9 3h3v3h-3zM3 3h3v3H3zm9-3h3v3h-3zM0 13h3v3H0z" />
+
+          </svg>
+        </button>
+
+        <!-- Кнопка Like с текстом в span -->
+        <button class="card__like-button" type="button">
+          <span class="button__text">Like</span>
+        </button>
+      </div>
+    </article>
+
+    <article class="card container">
+      <!-- Заголовок карточки -->
+      <h2 class="card__title">2 спринт: Погоня за идеалом</h2>
+      <div class="card__image-container">
+        <!-- Изображение поста -->
+        <img class="card__image card__image_style_contrast" src="images/Season 3 Running GIF by The Office.gif"
+          alt="Сцена из сериала Офис: бегущий персонаж">
+        <span class="card__watermark" aria-hidden="true">&lt;/HTML&gt;</span>
+      </div>
+      <!-- Текстовый контент карточки -->
+      <div class="card__text-content">
+        <p class="card__text">На этом этапе вы уже достаточно разбирались в основах вёрстки, чтобы понять, как много ещё
+          впереди. Вы могли попытаться
+          погнаться за идеалом и понять, что он недостижим. А, может, вы вовсе и не подвержены перфекционизму и вместо
+          того, чтобы
+          сделать идеально, старались просто сделать.</p>
+        <p class="card__text">Место для ваших воспоминаний о начале второго спринта.</p>
+      </div>
+
+      <!-- Блок с интерактивными кнопками внизу карточки -->
+      <div class="card__buttons">
+        <!-- Кнопка-сердце для лайка -->
+        <button class="card__icon-button" type="button" aria-label="Поставить лайк">
+          <!-- Инлайновый SVG сердца с классом like-icon -->
+          <svg class="like-icon" xmlns="http://www.w3.org/2000/svg" width="39" height="36" fill="none"
+            viewBox="0 0 39 36">
+
+            <!-- Группа для тела сердца (увеличивается при анимации без искр) -->
+            <g class="heart">
+              <!-- Контур (contour) — заменен цвет на переменную -->
+              <path class="contour" fill="var(--heart-contour-color)"
+                d="M12 6H9v3h3zm3 0h-3v3h3zM9 9H6v3h3zm0 3H6v3h3zm0 3H6v3h3zm9-9h-3v3h3zm-6 12H9v3h3zm3 3h-3v3h3zm3 3h-3v3h3zm9-18h3v3h-3zm-3 0h3v3h-3zm6 3h3v3h-3zm0 3h3v3h-3zm0 3h3v3h-3zm-9-9h3v3h-3zm6 12h3v3h-3zm-3 3h3v3h-3zm-3 3h3v3h-3zm0 3h-3v3h3zm0-18h-3v3h3z" />
+
+              <!-- Основное тело (main-body) — цвет изменен на transparent -->
+              <path class="main-body" fill="transparent"
+                d="M12 9H9v3h3zm3 3h-3v3h3zm3-3h-3v3h3zm-6 6H9v3h3zm3 0h-3v3h3zm0 3h-3v3h3zm3-6h-3v3h3zm0 9h-3v3h3zm0-3h-3v3h3zm9-9h3v3h-3zm-3 0h3v3h-3zm3 3h3v3h-3zm-3 0h3v3h-3zm-3-3h3v3h-3zm6 6h3v3h-3zm-3 0h3v3h-3zm0 3h3v3h-3zm-3-6h3v3h-3zm0 9h3v3h-3zm0-3h3v3h-3zm0 3h-3v3h3zm0 3h-3v3h3z" />
+
+              <!-- Сердцевина (core) — цвет изменен на transparent -->
+              <path class="core" fill="transparent"
+                d="M18 15h-3v3h3zm3 0h3v3h-3zm0 0h-3v3h3zm0-3h-3v3h3zm0 6h-3v3h3z" />
+            </g>
+
+            <!-- Искры (sparks) — заменен цвет на переменную, прозрачность задается в CSS -->
+            <path class="sparks" fill="var(--animation-fill-color)"
+              d="M36 13h3v3h-3zm-9 14h3v3h-3zm-9 6h3v3h-3zm-9-6h3v3H9zM24 0h3v3h-3zm9 3h3v3h-3zM3 3h3v3H3zm9-3h3v3h-3zM0 13h3v3H0z" />
+
+          </svg>
+        </button>
+
+        <!-- Кнопка Like с текстом в span -->
+        <button class="card__like-button" type="button">
+          <span class="button__text">Like</span>
+        </button>
+      </div>
+    </article>
+
+    <article class="card container">
+      <!-- Заголовок карточки -->
+      <h2 class="card__title">2 спринт: О тех, кто рядом</h2>
+      <div class="card__image-container">
+        <!-- Изображение поста -->
+        <img class="card__image card__image_style_hue" src="images/Best Friends GIF by Studios 2016.gif"
+          alt="Лучшие друзья скелеты">
+        <span class="card__watermark" aria-hidden="true">&lt;/HTML&gt;</span>
+      </div>
+      <!-- Текстовый контент карточки -->
+      <div class="card__text-content">
+        <p class="card__text">Всё это время вы были не одиноки (хотя, возможно, иногда и чувствовали, что одни против
+          целого мира). Вас окружали
+          одногруппники, команда сопровождения и просто близкие люди, которым можно пожаловаться, если очередной макет
+          просто так
+          не поддавался. Осваивать что-то новое легче, когда рядом есть единомышленники, не правда ли?</p>
+        <p class="card__text">Место для ваших воспоминаний об окончании второго спринта.</p>
+      </div>
+
+      <!-- Блок с интерактивными кнопками внизу карточки -->
+      <div class="card__buttons">
+        <!-- Кнопка-сердце для лайка -->
+        <button class="card__icon-button" type="button" aria-label="Поставить лайк">
+          <!-- Инлайновый SVG сердца с классом like-icon -->
+          <svg class="like-icon" xmlns="http://www.w3.org/2000/svg" width="39" height="36" fill="none"
+            viewBox="0 0 39 36">
+
+            <!-- Группа для тела сердца (увеличивается при анимации без искр) -->
+            <g class="heart">
+              <!-- Контур (contour) — заменен цвет на переменную -->
+              <path class="contour" fill="var(--heart-contour-color)"
+                d="M12 6H9v3h3zm3 0h-3v3h3zM9 9H6v3h3zm0 3H6v3h3zm0 3H6v3h3zm9-9h-3v3h3zm-6 12H9v3h3zm3 3h-3v3h3zm3 3h-3v3h3zm9-18h3v3h-3zm-3 0h3v3h-3zm6 3h3v3h-3zm0 3h3v3h-3zm0 3h3v3h-3zm-9-9h3v3h-3zm6 12h3v3h-3zm-3 3h3v3h-3zm-3 3h3v3h-3zm0 3h-3v3h3zm0-18h-3v3h3z" />
+
+              <!-- Основное тело (main-body) — цвет изменен на transparent -->
+              <path class="main-body" fill="transparent"
+                d="M12 9H9v3h3zm3 3h-3v3h3zm3-3h-3v3h3zm-6 6H9v3h3zm3 0h-3v3h3zm0 3h-3v3h3zm3-6h-3v3h3zm0 9h-3v3h3zm0-3h-3v3h3zm9-9h3v3h-3zm-3 0h3v3h-3zm3 3h3v3h-3zm-3 0h3v3h-3zm-3-3h3v3h-3zm6 6h3v3h-3zm-3 0h3v3h-3zm0 3h3v3h-3zm-3-6h3v3h-3zm0 9h3v3h-3zm0-3h3v3h-3zm0 3h-3v3h3zm0 3h-3v3h3z" />
+
+              <!-- Сердцевина (core) — цвет изменен на transparent -->
+              <path class="core" fill="transparent"
+                d="M18 15h-3v3h3zm3 0h3v3h-3zm0 0h-3v3h3zm0-3h-3v3h3zm0 6h-3v3h3z" />
+            </g>
+
+            <!-- Искры (sparks) — заменен цвет на переменную, прозрачность задается в CSS -->
+            <path class="sparks" fill="var(--animation-fill-color)"
+              d="M36 13h3v3h-3zm-9 14h3v3h-3zm-9 6h3v3h-3zm-9-6h3v3H9zM24 0h3v3h-3zm9 3h3v3h-3zM3 3h3v3H3zm9-3h3v3h-3zM0 13h3v3H0z" />
+
+          </svg>
+        </button>
+
+        <!-- Кнопка Like с текстом в span -->
+        <button class="card__like-button" type="button">
+          <span class="button__text">Like</span>
+        </button>
+      </div>
+    </article>
+
+    <article class="card container">
+      <!-- Заголовок карточки -->
+      <h2 class="card__title">3 спринт: Обходные стратегии</h2>
+      <div class="card__image-container">
+        <!-- Изображение поста -->
+        <img class="card__image card__image_style_blur" src="images/Let Me Think What GIF.gif"
+          alt="Рыжий код задумался, на лбу у кота иконка загрузки">
+        <span class="card__watermark" aria-hidden="true">&lt;/HTML&gt;</span>
+      </div>
+      <!-- Текстовый контент карточки -->
+      <div class="card__text-content">
+        <p class="card__text">На этом курсе вы постоянно решали разные задачи. В какой-то момент вам могло показаться,
+          что решения просто иссякли.
+          Значит, пришло время посмотреть на задачу под другим углом.</p>
+        <p class="card__text">Место для ваших воспоминаний о начале третьего спринта.</p>
+      </div>
+
+      <!-- Блок с интерактивными кнопками внизу карточки -->
+      <div class="card__buttons">
+        <!-- Кнопка-сердце для лайка -->
+        <button class="card__icon-button" type="button" aria-label="Поставить лайк">
+          <!-- Инлайновый SVG сердца с классом like-icon -->
+          <svg class="like-icon" xmlns="http://www.w3.org/2000/svg" width="39" height="36" fill="none"
+            viewBox="0 0 39 36">
+
+            <!-- Группа для тела сердца (увеличивается при анимации без искр) -->
+            <g class="heart">
+              <!-- Контур (contour) — заменен цвет на переменную -->
+              <path class="contour" fill="var(--heart-contour-color)"
+                d="M12 6H9v3h3zm3 0h-3v3h3zM9 9H6v3h3zm0 3H6v3h3zm0 3H6v3h3zm9-9h-3v3h3zm-6 12H9v3h3zm3 3h-3v3h3zm3 3h-3v3h3zm9-18h3v3h-3zm-3 0h3v3h-3zm6 3h3v3h-3zm0 3h3v3h-3zm0 3h3v3h-3zm-9-9h3v3h-3zm6 12h3v3h-3zm-3 3h3v3h-3zm-3 3h3v3h-3zm0 3h-3v3h3zm0-18h-3v3h3z" />
+
+              <!-- Основное тело (main-body) — цвет изменен на transparent -->
+              <path class="main-body" fill="transparent"
+                d="M12 9H9v3h3zm3 3h-3v3h3zm3-3h-3v3h3zm-6 6H9v3h3zm3 0h-3v3h3zm0 3h-3v3h3zm3-6h-3v3h3zm0 9h-3v3h3zm0-3h-3v3h3zm9-9h3v3h-3zm-3 0h3v3h-3zm3 3h3v3h-3zm-3 0h3v3h-3zm-3-3h3v3h-3zm6 6h3v3h-3zm-3 0h3v3h-3zm0 3h3v3h-3zm-3-6h3v3h-3zm0 9h3v3h-3zm0-3h3v3h-3zm0 3h-3v3h3zm0 3h-3v3h3z" />
+
+              <!-- Сердцевина (core) — цвет изменен на transparent -->
+              <path class="core" fill="transparent"
+                d="M18 15h-3v3h3zm3 0h3v3h-3zm0 0h-3v3h3zm0-3h-3v3h3zm0 6h-3v3h3z" />
+            </g>
+
+            <!-- Искры (sparks) — заменен цвет на переменную, прозрачность задается в CSS -->
+            <path class="sparks" fill="var(--animation-fill-color)"
+              d="M36 13h3v3h-3zm-9 14h3v3h-3zm-9 6h3v3h-3zm-9-6h3v3H9zM24 0h3v3h-3zm9 3h3v3h-3zM3 3h3v3H3zm9-3h3v3h-3zM0 13h3v3H0z" />
+
+          </svg>
+        </button>
+
+        <!-- Кнопка Like с текстом в span -->
+        <button class="card__like-button" type="button">
+          <span class="button__text">Like</span>
+        </button>
+      </div>
+    </article>
+
+    <article class="card container">
+      <!-- Заголовок карточки -->
+      <h2 class="card__title">3 спринт: Когда опускаются руки</h2>
+      <div class="card__image-container">
+        <!-- Изображение поста -->
+        <img class="card__image card__image_style_multiple" src="images/Tired Battery GIF.gif"
+          alt="Уставшая батарейка">
+        <span class="card__watermark" aria-hidden="true">&lt;/HTML&gt;</span>
+      </div>
+      <!-- Текстовый контент карточки -->
+      <div class="card__text-content">
+        <p class="card__text">Во время учёбы часто возникает чувство, когда не знаешь, за что хвататься. Вроде и
+          проектную пора сдавать, и задачи
+          хочется порешать, и в теории получше разобраться, и жизнь не забыть пожить. В такие моменты очень нужна
+          концентрация.
+          Вспомните, откуда вы её черпали.</p>
+        <p class="card__text">Место для ваших воспоминаний об окончании третьего спринта.</p>
+      </div>
+
+      <!-- Блок с интерактивными кнопками внизу карточки -->
+      <div class="card__buttons">
+        <!-- Кнопка-сердце для лайка -->
+        <button class="card__icon-button" type="button" aria-label="Поставить лайк">
+          <!-- Инлайновый SVG сердца с классом like-icon -->
+          <svg class="like-icon" xmlns="http://www.w3.org/2000/svg" width="39" height="36" fill="none"
+            viewBox="0 0 39 36">
+
+            <!-- Группа для тела сердца (увеличивается при анимации без искр) -->
+            <g class="heart">
+              <!-- Контур (contour) — заменен цвет на переменную -->
+              <path class="contour" fill="var(--heart-contour-color)"
+                d="M12 6H9v3h3zm3 0h-3v3h3zM9 9H6v3h3zm0 3H6v3h3zm0 3H6v3h3zm9-9h-3v3h3zm-6 12H9v3h3zm3 3h-3v3h3zm3 3h-3v3h3zm9-18h3v3h-3zm-3 0h3v3h-3zm6 3h3v3h-3zm0 3h3v3h-3zm0 3h3v3h-3zm-9-9h3v3h-3zm6 12h3v3h-3zm-3 3h3v3h-3zm-3 3h3v3h-3zm0 3h-3v3h3zm0-18h-3v3h3z" />
+
+              <!-- Основное тело (main-body) — цвет изменен на transparent -->
+              <path class="main-body" fill="transparent"
+                d="M12 9H9v3h3zm3 3h-3v3h3zm3-3h-3v3h3zm-6 6H9v3h3zm3 0h-3v3h3zm0 3h-3v3h3zm3-6h-3v3h3zm0 9h-3v3h3zm0-3h-3v3h3zm9-9h3v3h-3zm-3 0h3v3h-3zm3 3h3v3h-3zm-3 0h3v3h-3zm-3-3h3v3h-3zm6 6h3v3h-3zm-3 0h3v3h-3zm0 3h3v3h-3zm-3-6h3v3h-3zm0 9h3v3h-3zm0-3h3v3h-3zm0 3h-3v3h3zm0 3h-3v3h3z" />
+
+              <!-- Сердцевина (core) — цвет изменен на transparent -->
+              <path class="core" fill="transparent"
+                d="M18 15h-3v3h3zm3 0h3v3h-3zm0 0h-3v3h3zm0-3h-3v3h3zm0 6h-3v3h3z" />
+            </g>
+
+            <!-- Искры (sparks) — заменен цвет на переменную, прозрачность задается в CSS -->
+            <path class="sparks" fill="var(--animation-fill-color)"
+              d="M36 13h3v3h-3zm-9 14h3v3h-3zm-9 6h3v3h-3zm-9-6h3v3H9zM24 0h3v3h-3zm9 3h3v3h-3zM3 3h3v3H3zm9-3h3v3h-3zM0 13h3v3H0z" />
+
+          </svg>
+        </button>
+
+        <!-- Кнопка Like с текстом в span -->
+        <button class="card__like-button" type="button">
+          <span class="button__text">Like</span>
+        </button>
+      </div>
+    </article>
+
+    <article class="card container">
+      <!-- Заголовок карточки -->
+      <h2 class="card__title">«Сейчас я здесь»</h2>
+      <div class="card__image-container">
+        <!-- Изображение поста -->
+        <img class="card__image card__image_style_bright" src="images/No Problem Reaction GIF.gif"
+          alt="Старик показывает жест без проблем">
+        <span class="card__watermark" aria-hidden="true">&lt;/HTML&gt;</span>
+      </div>
+      <!-- Текстовый контент карточки -->
+      <div class="card__text-content">
+        <p class="card__text">Сейчас вы уже очень много знаете о вёрстке. Но это только начало. Во-первых, впереди ещё
+          много материала про
+          «красотищу». Во-вторых, с окончанием курса учёба не заканчивается. Вёрстка — это целый мир. И этот мир
+          постоянно
+          меняется. Познать его полностью не получится, но это тот случай, когда важен сам процесс познания. Ведь часто
+          путь — и
+          есть результат.</p>
+        <p class="card__text">Кажется что прошел половину пути, хотя лишь дотронулся до вершины айсберга. Каждый день узнаешь что то новое и это круто.</p>
+      </div>
+
+      <!-- Блок с интерактивными кнопками внизу карточки -->
+      <div class="card__buttons">
+        <!-- Кнопка-сердце для лайка -->
+        <button class="card__icon-button" type="button" aria-label="Поставить лайк">
+          <!-- Инлайновый SVG сердца с классом like-icon -->
+          <svg class="like-icon" xmlns="http://www.w3.org/2000/svg" width="39" height="36" fill="none"
+            viewBox="0 0 39 36">
+
+            <!-- Группа для тела сердца (увеличивается при анимации без искр) -->
+            <g class="heart">
+              <!-- Контур (contour) — заменен цвет на переменную -->
+              <path class="contour" fill="var(--heart-contour-color)"
+                d="M12 6H9v3h3zm3 0h-3v3h3zM9 9H6v3h3zm0 3H6v3h3zm0 3H6v3h3zm9-9h-3v3h3zm-6 12H9v3h3zm3 3h-3v3h3zm3 3h-3v3h3zm9-18h3v3h-3zm-3 0h3v3h-3zm6 3h3v3h-3zm0 3h3v3h-3zm0 3h3v3h-3zm-9-9h3v3h-3zm6 12h3v3h-3zm-3 3h3v3h-3zm-3 3h3v3h-3zm0 3h-3v3h3zm0-18h-3v3h3z" />
+
+              <!-- Основное тело (main-body) — цвет изменен на transparent -->
+              <path class="main-body" fill="transparent"
+                d="M12 9H9v3h3zm3 3h-3v3h3zm3-3h-3v3h3zm-6 6H9v3h3zm3 0h-3v3h3zm0 3h-3v3h3zm3-6h-3v3h3zm0 9h-3v3h3zm0-3h-3v3h3zm9-9h3v3h-3zm-3 0h3v3h-3zm3 3h3v3h-3zm-3 0h3v3h-3zm-3-3h3v3h-3zm6 6h3v3h-3zm-3 0h3v3h-3zm0 3h3v3h-3zm-3-6h3v3h-3zm0 9h3v3h-3zm0-3h3v3h-3zm0 3h-3v3h3zm0 3h-3v3h3z" />
+
+              <!-- Сердцевина (core) — цвет изменен на transparent -->
+              <path class="core" fill="transparent"
+                d="M18 15h-3v3h3zm3 0h3v3h-3zm0 0h-3v3h3zm0-3h-3v3h3zm0 6h-3v3h3z" />
+            </g>
+
+            <!-- Искры (sparks) — заменен цвет на переменную, прозрачность задается в CSS -->
+            <path class="sparks" fill="var(--animation-fill-color)"
+              d="M36 13h3v3h-3zm-9 14h3v3h-3zm-9 6h3v3h-3zm-9-6h3v3H9zM24 0h3v3h-3zm9 3h3v3h-3zM3 3h3v3H3zm9-3h3v3h-3zM0 13h3v3H0z" />
+
+          </svg>
+        </button>
+
+        <!-- Кнопка Like с текстом в span -->
+        <button class="card__like-button" type="button">
+          <span class="button__text">Like</span>
+        </button>
+      </div>
+    </article>
+
+    <div class="save-panel container">
+      <button class="save-button" type="button">
+        <svg class="save-button__icon" width="28" height="28">
+          <use href="#floppy-disk"></use>
+        </svg>
+        <span class="button__text">Сохранить на память</span>
+      </button>
+    </div>
+
+    <!-- Модальное окно (диалог) -->
+    <dialog class="modal-dialog">
+      <div class="modal-dialog__content">
+        <!-- Левая колонка: Иконка дискеты -->
+        <svg class="modal-dialog__icon" width="39" height="39">
+          <use href="#floppy-disk"></use>
+        </svg>
+
+        <!-- Правая колонка: Текст-предупреждение -->
+        <p class="modal-dialog__text">Вставьте дискету, чтобы продолжить</p>
+      </div>
+
+      <!-- Кнопка закрытия окна -->
+      <button class="modal-dialog__close-button" type="button">
+        <span class="button__text">ОК</span>
+      </button>
+    </dialog>
+
+  </main>
+  <script src="./scripts/like.js"></script>
+</body>
+
 </html>
