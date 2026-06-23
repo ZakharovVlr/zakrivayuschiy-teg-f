@@ -1,1 +1,30 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+:root {
+    /* Семейства шрифтов */
+    --main-font: 'Inter', sans-serif;
+    --accent-font: 'PressStart2P', cursive;
+
+    /* Настройки веса для вариативного шрифта */
+    --main-text-weight: 400;
+    /* Обычный текст карточек */
+    --card-title-weight: 700;
+    /* Жирные заголовки карточек */
+    /* Сложный множественный фон */
+    --page-background:
+        /* 1. Вертикальные полосы слева направо */
+        repeating-linear-gradient(90deg, #d3d3d3 0px, #d3d3d3 2px, transparent 2px, transparent 4px),
+        /* 2. Горизонтальные полосы сверху вниз */
+        repeating-linear-gradient(180deg, #d3d3d3 0px, #d3d3d3 2px, transparent 2px, transparent 4px),
+        /* 3. Фоновый градиент изменения насыщенности */
+        linear-gradient(180deg, #e7e7e7 0.01%, #1a1a1a 100%);
+    /* Резиновая ширина для блоков (мин: 375px, адаптив: 50%, макс: 700px) */
+    /* Подберите точные значения под макет, например: clamp(375px, 60vw, 700px) */
+    --block-width: clamp(375px, 60vw, 700px);
+    /* Резиновые отступы шапки (например, мин: 20px, макс: 50px) */
+    --header-padding: clamp(1.25rem, 4vw, 3.125rem);
+    /* Резиновый размер шрифта для крупного логотипа */
+    --logo-font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
+    --header-title-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
+    --block-width: clamp(375px, 100%, 700px);
+    --text-color: #000;
+}
