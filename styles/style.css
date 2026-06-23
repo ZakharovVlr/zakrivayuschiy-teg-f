@@ -14,39 +14,30 @@
   min-inline-size: 320px;
   min-block-size: 100dvb;
   font-family: var(--main-font);
-  /* Настройка веса вариативного шрифта через 'wght' */
   font-variation-settings: 'wght' var(--main-text-weight);
   background-image: var(--page-background);
   font-family: var(--main-font);
   font-variation-settings: 'wght' var(--main-text-weight);
-  /* Подключаем градиент */
   background-image: var(--page-background);
-  /* Делаем фон фиксированным при скролле */
   background-attachment: fixed;
-  /* Растягиваем фон на всё пространство */
   background-size: cover;
 }
 
-/* Общий класс для ограничения ширины всех крупных блоков на сайте */
 .container {
   width: var(--block-width);
   margin-inline: auto;
-  /* Центрирует блок по горизонтали */
 }
 
 .header {
   width: var(--block-width);
-  /* Задаем высоту из макета как минимальную, чтобы на мобильных контент не сжимался */
   min-height: 368px;
   margin-inline: auto;
   margin-block: 100px;
   background-color: var(--object-background);
-  /* Центрируем саму шапку на странице */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  /* Делаем резиновые отступы сверху/снизу и по бокам */
   padding: clamp(1.5rem, 5vw, 3rem) 20px;
   box-sizing: border-box;
   border: 2px solid #000000;
@@ -70,7 +61,6 @@
 
 .header__title {
   font-family: var(--accent-font);
-  /* Резиновый размер для подзаголовка (мин: 14px, макс: 24px) */
   font-size: var(--header-title-size);
   text-transform: uppercase;
 }
@@ -79,7 +69,6 @@
   display: flex;
   flex-direction: column;
   gap: 50px;
-  /* Отступ между карточками, если их будет несколько */
 }
 
 .card {
@@ -102,7 +91,6 @@
   height: 696px;
   display: block;
   border-block: 2px solid #000000;
-  /* Линии рамки сверху и снизу картинки */
   object-fit: cover;
 }
 
@@ -110,7 +98,6 @@
   position: relative;
   width: 100%;
   border-block: 2px solid #000000;
-  /* Переносим рамку с самой картинки на контейнер */
 }
 
 .card__watermark {
@@ -121,24 +108,13 @@
   font-size: 14px;
   font-weight: 400;
   line-height: 100%;
-  color: #000000;
   opacity: 0.5;
-  mix-blend-mode: hard-light;
-}
-
-/* Идеальная белая обводка в 1px для современных браузеров */
-@supports (-webkit-text-stroke: 1px #ffffff) or (text-stroke: 1px #ffffff) {
-  .card__watermark {
-    text-shadow: none;
-    -webkit-text-stroke: 1px #ffffff;
-    text-stroke: 1px #ffffff;
-  }
+  -webkit-text-stroke: 1px #ffffff;
+  text-stroke: 1px #ffffff;
 }
 
 .card__text-content {
-  /* Отступы внутри текстового блока карточки */
   padding: 23px 25px 0 25px;
-  /* Снизу 0, так как под кнопками будет свой padding */
   display: flex;
   flex-direction: column;
   gap: 25px;
@@ -177,11 +153,9 @@
   border: 2px solid #000000;
   cursor: pointer;
   font-family: var(--accent-font);
-  /* Обычно для кнопок используется акцентный шрифт */
   font-size: 0.875rem;
 }
 
-/* Панель с кнопкой сохранения */
 .save-panel {
   display: flex;
   justify-content: center;
@@ -201,14 +175,10 @@
 }
 
 .save-button__icon {
-  /* Задаем аккуратный размер иконки на кнопке */
   width: 21px;
   height: 21px;
 }
 
-/* --- СТИЛИ МОДАЛЬНОГО ОКНА --- */
-
-/* По умолчанию окно скрыто */
 .modal-dialog {
   display: none;
   position: fixed;
@@ -224,12 +194,10 @@
   gap: 30px;
 }
 
-/* Когда окно открыто скриптом (добавляется атрибут open) */
 .modal-dialog[open] {
   display: flex;
 }
 
-/* Двухколоночный контент внутри окна */
 .modal-dialog__content {
   display: flex;
   align-items: center;
@@ -241,6 +209,7 @@
   width: 39px;
   height: 39px;
   flex-shrink: 0;
+  filter: invert(1);
 }
 
 .modal-dialog__text {
@@ -264,10 +233,10 @@
   cursor: pointer;
 }
 
-/* Затемнение заднего фона (работает только когда <dialog> открыт через метод showModal) */
 .modal-dialog::backdrop {
   background-color: rgba(0, 0, 0, 0.75);
 }
+
 /* Шаг 6 */
 
 .card__image_style_mono {
@@ -304,17 +273,12 @@
 
 @media (width <=375px) {
 
-  /* Уменьшаем общие отступы у страницы и шапки */
   .header {
-    /* Устанавливаем точные размеры мобильной шапки из Figma */
     width: 100%;
     max-width: 375px;
-    /* Изменяем min-height с десктопных 368px на мобильные 327px */
     min-height: 327px;
-    /* Добавляем рамку, которая видна на макете */
     border: 2px solid #000000;
     background-color: #ffffff;
-    /* Сбрасываем лишние десктопные отступы */
     padding: 0;
     box-sizing: border-box;
   }
@@ -323,26 +287,20 @@
     height: 371px;
   }
 
-.save-button {
-  /* Меняем направление элементов на вертикальное, как в Figma (Flow: Vertical) */
-  flex-direction: column;
+  .save-button {
+    flex-direction: column;
+    width: 306px;
+    height: 84px;
+    padding: 15px 12px;
+    gap: 8px;
+    background-color: #ffffff;
+    border: 2px solid #000000;
+    align-items: center;
+    justify-content: center;
+  }
 
-  /* Точные размеры и отступы из панели свойств */
-  width: 306px;
-  height: 84px;
-  padding: 15px 12px;
-  gap: 8px;
-
-  background-color: #ffffff;
-  border: 2px solid #000000;
-
-  align-items: center;
-  justify-content: center;
-}
-
-.save-button__icon {
-  /* Задаем размер для дискеты, чтобы она гармонично смотрелась в вертикальном стеке */
-  width: 28px;
-  height: 28px;
-}
+  .save-button__icon {
+    width: 28px;
+    height: 28px;
+  }
 }
