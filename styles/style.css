@@ -16,9 +16,6 @@
   font-family: var(--main-font);
   font-variation-settings: 'wght' var(--main-text-weight);
   background-image: var(--page-background);
-  font-family: var(--main-font);
-  font-variation-settings: 'wght' var(--main-text-weight);
-  background-image: var(--page-background);
   background-attachment: fixed;
   background-size: cover;
 }
@@ -109,8 +106,13 @@
   font-weight: 400;
   line-height: 100%;
   opacity: 0.5;
-  -webkit-text-stroke: 1px #ffffff;
-  text-stroke: 1px #ffffff;
+}
+
+@supports (text-stroke: 1px #fff) or (-webkit-text-stroke: 1px #fff) {
+  .card__watermark {
+    -webkit-text-stroke: 1px #fff;
+    text-stroke: 1px #fff;
+  }
 }
 
 .card__text-content {
