@@ -34,7 +34,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: clamp(1.5rem, 5vw, 3rem) 20px;
+  padding: clamp(8rem, 5vw, 1rem) 128px;
   box-sizing: border-box;
   border: 2px solid #000000;
 }
@@ -84,7 +84,7 @@
 
 .card__image {
   width: 100%;
-  height: 696px;
+  min-height: 696px;
   display: block;
   border-block: 2px solid #000000;
   object-fit: cover;
@@ -140,11 +140,13 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  gap: 10px;
-  padding: 29px 26px 23px 17px;
+  gap: 5px;
+  padding: 26px 26px 23px 17px;
 }
 
 .card__icon-button {
+  width: 38px;
+  height: 38px;
   background: none;
   border: none;
   padding: 0;
@@ -179,7 +181,7 @@
   display: flex;
   align-items: center;
   gap: 8px;
-  padding: 14px 20px;
+  padding: 16px 20px;
   background-color: #ffffff;
   border: 2px solid #000000;
   font-family: var(--accent-font);
@@ -219,8 +221,8 @@
 }
 
 .modal-dialog__icon {
-  width: 39px;
-  height: 39px;
+  width: 21px;
+  height: 21px;
   flex-shrink: 0;
   filter: invert(1);
 }
@@ -237,6 +239,7 @@
 /* Кнопка ОК */
 .modal-dialog__close-button {
   width: 100%;
+  max-width: 293px;
   height: 38px;
   background-color: #ffffff;
   border: 2px solid #000000;
@@ -291,12 +294,19 @@
     max-width: 375px;
     border: 2px solid #000000;
     background-color: #ffffff;
-    padding: 120px 10px;
+    padding: 120px 0px;
     box-sizing: border-box;
   }
 
   .card__image {
-    height: 371px;
+    min-height: 371px;
+  }
+
+  .card__text-content {
+    padding: 24px 25px 0 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
   }
 
   .save-button {
@@ -314,5 +324,11 @@
   .save-button__icon {
     width: 28px;
     height: 28px;
+  }
+
+  .modal-dialog__close-button {
+    width: 100%;
+    max-width: 261px;
+    height: 38px;
   }
 }
