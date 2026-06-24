@@ -2,12 +2,12 @@
 :root {
     /* Семейства шрифтов */
     --main-font: 'Inter', sans-serif;
-    --accent-font: 'PressStart2P', cursive;
+    --accent-font: 'PressStart2P', fantasy;
 
     /* Настройки веса для вариативного шрифта */
     --main-text-weight: 410;
     /* Обычный текст карточек */
-    --card-title-weight: 700;
+    --card-title-weight: 715;
     /* Жирные заголовки карточек */
     /* Сложный множественный фон */
     --page-background:

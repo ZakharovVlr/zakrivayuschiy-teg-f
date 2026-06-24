@@ -43,12 +43,13 @@
     transition: fill 0.3s linear 0.05s;
 }
 
-.card__icon-button:active .like-icon .core {
+/* Убираем .like-icon из середины цепочки */
+.card__icon-button:active .core {
     fill: var(--animation-fill-color);
     transition: fill 0.3s linear 0s;
 }
 
-.card__icon-button:active .like-icon .main-body {
+.card__icon-button:active .main-body {
     fill: var(--animation-fill-color);
     transition: fill 0.3s linear 0.05s;
 }
@@ -104,9 +105,7 @@
     }
 }
 
-.card__like-button,
-.save-button,
-.modal-dialog__close-button {
+.button {
     position: relative;
     overflow: hidden;
     background-color: #ffffff;
@@ -115,20 +114,16 @@
     transition: box-shadow 0.3s ease;
 }
 
-.card__like-button:focus {
+.button:focus {
     outline: none;
 }
 
-.card__like-button:focus-visible,
-.save-button:focus-visible,
-.modal-dialog__close-button:focus-visible {
+.button:focus-visible {
     outline: none;
     box-shadow: 2px 2px 0px 0px #000000;
 }
 
-.card__like-button::before,
-.save-button::before,
-.modal-dialog__close-button::before {
+.button::before {
     content: '';
     position: absolute;
     top: 0;
@@ -140,9 +135,7 @@
     transition: transform 0.5s ease-in-out;
 }
 
-.card__like-button:hover::before,
-.save-button:hover::before,
-.modal-dialog__close-button:hover::before {
+.button:hover::before {
     transform: translateX(0);
 }
 

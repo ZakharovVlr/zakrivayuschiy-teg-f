@@ -27,7 +27,6 @@
 
 .header {
   width: var(--block-width);
-  min-height: 368px;
   margin-inline: auto;
   margin-block: 100px;
   background-color: var(--object-background);
@@ -106,10 +105,17 @@
   font-weight: 400;
   line-height: 100%;
   opacity: 0.5;
+  text-shadow:
+    -1px -1px 0 #fff,
+    1px -1px 0 #fff,
+    -1px 1px 0 #fff,
+    1px 1px 0 #fff;
 }
 
+/* Проверяем поддержку text-stroke или -webkit-text-stroke через оператор или */
 @supports (text-stroke: 1px #fff) or (-webkit-text-stroke: 1px #fff) {
   .card__watermark {
+    text-shadow: none;
     -webkit-text-stroke: 1px #fff;
     text-stroke: 1px #fff;
   }
@@ -283,10 +289,9 @@
   .header {
     width: 100%;
     max-width: 375px;
-    min-height: 327px;
     border: 2px solid #000000;
     background-color: #ffffff;
-    padding: 0;
+    padding: 120px 10px;
     box-sizing: border-box;
   }
 
