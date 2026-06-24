@@ -104,63 +104,28 @@
     }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .card__like-button,
 .save-button,
 .modal-dialog__close-button {
     position: relative;
     overflow: hidden;
-    /* Скрываем выезжающий псевдоэлемент за пределами кнопки */
     background-color: #ffffff;
-    /* Белый фон для корректной работы разности цветов */
     border: 2px solid #000000;
     cursor: pointer;
-
-    /* Плавный переход для появления тени по ТЗ (0.3s ease) */
     transition: box-shadow 0.3s ease;
 }
 
-/* 1. Настройка фокуса с клавиатуры */
 .card__like-button:focus {
     outline: none;
-    /* Всегда отменяем стандартную обводку браузера */
 }
 
 .card__like-button:focus-visible,
 .save-button:focus-visible,
 .modal-dialog__close-button:focus-visible {
     outline: none;
-    /* Плотная тень без размытия, сдвинутая на 2px по X и Y */
     box-shadow: 2px 2px 0px 0px #000000;
 }
 
-/* 2. Псевдоэлемент для анимации наведения (выезжает слева направо) */
 .card__like-button::before,
 .save-button::before,
 .modal-dialog__close-button::before {
@@ -171,31 +136,21 @@
     width: 100%;
     height: 100%;
     background-color: #000000;
-    /* Чёрная шторка */
-
-    /* Изначально полностью выдвигаем псевдоэлемент влево */
     transform: translateX(-100%);
-
-    /* Плавность по ТЗ: 0.5s ease-in-out */
     transition: transform 0.5s ease-in-out;
 }
 
-/* По наведению возвращаем шторку на место */
 .card__like-button:hover::before,
 .save-button:hover::before,
 .modal-dialog__close-button:hover::before {
     transform: translateX(0);
 }
 
-/* 3. Магия инверсии текста и иконки дискеты */
 .button__text,
 .save-button__icon {
     position: relative;
     z-index: 1;
-    /* Поднимаем контент выше выезжающей чёрной шторки */
     color: #ffffff;
-    /* Обязательно задаем БЕЛЫЙ цвет (в сочетании с разностью даст чёрный) */
     mix-blend-mode: difference;
-    /* Инвертирует белый в чёрный на белом фоне и наоборот */
 }
 
