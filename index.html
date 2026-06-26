@@ -467,31 +467,34 @@
       </div>
     </article>
 
-    <div class="save-panel container">
-      <button class="save-button button" type="button">
-        <svg class="modal-dialog__icon" width="39" height="39">
-          <use href="./svg/save.svg#floppy-disk"></use>
-        </svg>
-        <span class="button__text">Сохранить на память</span>
-      </button>
-    </div>
 
-    <!-- Модальное окно (диалог) -->
-    <dialog class="modal-dialog">
-      <div class="modal-dialog__content">
-        <!-- Левая колонка: Иконка дискеты -->
-        <svg class="modal-dialog__icon" width="39" height="39">
-          <use href="./svg/save.svg#floppy-disk"></use>
-        </svg>
-        <!-- Правая колонка: Текст-предупреждение -->
-        <p class="modal-dialog__text">Вставьте дискету, чтобы продолжить</p>
-      </div>
+<div class="save-panel container">
+  <button class="save-button button" type="button" onclick="window['dialog-id'].showModal()" aria-controls="dialog-id">
+    <!-- Размер 21х21 как в инспекторе кода -->
+    <svg class="modal-dialog__icon" width="21" height="21">
+      <use href="./svg/save.svg#floppy"></use>
+    </svg>
+    <span class="button__text">Сохранить на память</span>
+  </button>
+</div>
 
-      <!-- Кнопка закрытия окна -->
-      <button class="modal-dialog__close-button button" type="button">
-        <span class="button__text">ОК</span>
-      </button>
-    </dialog>
+<!-- Модальное окно (диалог) -->
+<dialog class="modal-dialog" id="dialog-id">
+  <div class="modal-dialog__content">
+    <!-- Левая колонка: Иконка дискеты крупнее (39х39) -->
+    <svg class="modal-dialog__icon" width="39" height="39">
+      <use href="./svg/save.svg#floppy"></use>
+    </svg>
+    <!-- Правая колонка: Текст-предупреждение -->
+    <p class="modal-dialog__text">Вставьте дискету, чтобы продолжить</p>
+  </div>
+
+  <!-- Кнопка закрытия окна -->
+  <button class="modal-dialog__close-button button" type="button" onclick="window['dialog-id'].close()">
+    <span class="button__text">ОК</span>
+  </button>
+</dialog>
+
 
   </main>
   <script src="./scripts/like.js"></script>

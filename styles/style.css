@@ -90,6 +90,10 @@
   object-fit: cover;
 }
 
+.card__image-container {
+  position: relative;
+}
+
 .card__watermark {
   position: absolute;
   top: 23px;
@@ -116,7 +120,7 @@
 }
 
 .card__text-content {
-  padding: 23px 25px 0 25px;
+  padding: 31px 25px 0 25px;
   display: flex;
   flex-direction: column;
   gap: 25px;
@@ -135,7 +139,7 @@
   justify-content: flex-end;
   align-items: center;
   gap: 5px;
-  padding: 26px 26px 23px 17px;
+  padding: 25px 25px 23px 17px;
 }
 
 .card__icon-button {
@@ -159,7 +163,7 @@
 .card__like-button {
   min-width: 130px;
   height: 38px;
-  background-color: #ffffff;
+  background-color: #fff;
   border: 2px solid #000000;
   cursor: pointer;
   font-family: var(--accent-font);
@@ -169,7 +173,7 @@
 .save-panel {
   display: flex;
   justify-content: center;
-  padding-block-end: 50px;
+  margin-bottom: 100px;
 }
 
 .save-button {
@@ -177,7 +181,8 @@
   align-items: center;
   gap: 8px;
   padding: 16px 20px;
-  background-color: #ffffff;
+  background-color: #fff;
+  color: #fff;
   border: 2px solid #000000;
   font-family: var(--accent-font);
   font-size: 14px;
@@ -212,14 +217,18 @@
   display: flex;
   align-items: center;
   gap: 20px;
-  width: 100%;
 }
 
 .modal-dialog__icon {
-  width: 21px;
-  height: 21px;
-  flex-shrink: 0;
-  filter: invert(1);
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  mix-blend-mode: difference;
+}
+
+.modal-dialog__content .modal-dialog__icon {
+  width: 115px;
+  height: 39px;
 }
 
 .modal-dialog__text {
@@ -295,10 +304,6 @@
     max-height: 371px;
   }
 
-  .card__text-content {
-    padding: 24px 25px 0 25px;
-  }
-
   .save-button {
     flex-direction: column;
     width: 306px;
@@ -315,11 +320,16 @@
   .modal-dialog__close-button {
     max-width: 261px;
   }
+
+  .modal-dialog__icon {
+    width: 32px;
+    height: 32px;
+  }
 }
 
 @media (min-width: 1200px) {
-    .card__image {
-        height: 696px;
-      }
+  .card__image {
+    height: 696px;
+  }
 
 }

@@ -39,17 +39,3 @@ function setButtonText(heart, button) {
     );
   }
 }
-
-const saveButton = document.querySelector('.save-button');
-const modal = document.querySelector('.modal-dialog');
-const closeButton = document.querySelector('.modal-dialog__close-button');
-
-// Открытие окна методом showModal() — это автоматически активирует ::backdrop
-saveButton.addEventListener('click', () => {
-  modal.showModal();
-});
-
-// Закрытие окна
-closeButton.addEventListener('click', () => {
-  modal.close();
-});
